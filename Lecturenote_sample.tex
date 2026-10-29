@@ -9,12 +9,17 @@
 \pagestyle{fancy}
 \fancyhf{} %reset default settings of the header.
 
+\renewcommand{\sectionmark}[1]{%
+  \markright{\thesection\quad #1}%
+}
+
 %%%%%%%%%% Title of the Lecture and Affiliation  %%%%%%%%%%
 \fancyhead[C]{%center of the header.
     \colorbox{white}{
         \parbox{1.0\textwidth}{
-            \color{black}\Large\bfseries 
-            Lecture Note \hfill Sample of Lecture Note
+            \color{black} {\Large \bfseries 
+            Sample of Lecture Note}
+            \hfill \bfseries \rightmark
         }
     } 
     \colorbox{black}{
@@ -27,9 +32,7 @@
     }
 }
 
-\renewcommand{\headrulewidth}{0pt} %deleting line of the head rule
-
-%%%%%%%%%% contact %%%%%%%%%%
+%%%%%%%%% contact %%%%%%%%%%
 \fancyfoot[C]{%center of the footer.
     \colorbox{black}{
       \parbox{1.0\textwidth}{
@@ -40,6 +43,10 @@
       }
     }
 }
+
+
+\renewcommand{\headrulewidth}{0pt} %deleting line of the head rule
+
 
 
 \begin{document}
@@ -59,3 +66,4 @@ What did you eat for dinner?
 \section{Is Linear Algebra Difficult?}
 \lipsum[1]
 \end{document}
+
